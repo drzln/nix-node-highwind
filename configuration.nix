@@ -93,8 +93,8 @@
   ];
 
   services.openssh.enable = true;
-  services.openssh.settings.PermitRootLogin = "yes";
-  services.openssh.settings.PasswordAuthentication = true;
+  # services.openssh.settings.PermitRootLogin = "yes";
+  # services.openssh.settings.PasswordAuthentication = true;
   services.dnsmasq.enable = true;
   services.dnsmasq.settings.server = [
     "1.1.1.1"
