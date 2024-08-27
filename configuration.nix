@@ -30,6 +30,17 @@
     ];
   };
 
+  users.users.root = {
+    isNormalUser = false;
+    description = "root";
+    extraGroups = [
+      "wheel"
+    ];
+    packages = with pkgs; [
+      home-manager
+    ];
+  };
+
   home-manager.users.luis = import ./home.nix;
   environment.systemPackages = with pkgs; [
     nix-index

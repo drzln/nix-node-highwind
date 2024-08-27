@@ -30,6 +30,8 @@
         system = "x86_64-linux";
         modules = [
           /etc/nixos/configuration.nix
+          /etc/nixos/local-config.nix
+          ./configuration.nix
           home-manager.nixosModules.home-manager
         ];
       };
