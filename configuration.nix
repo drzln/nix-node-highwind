@@ -32,7 +32,6 @@
 
   users.users.root = {
     isNormalUser = false;
-    description = "root";
     extraGroups = [
       "wheel"
     ];
