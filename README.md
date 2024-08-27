@@ -1,3 +1,1 @@
-# nix-node-highwind
-
-the highwind
+# nix-node-plo
