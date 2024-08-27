@@ -42,46 +42,7 @@
 
   home-manager.users.luis = import ./home.nix;
   environment.systemPackages = with pkgs; [
-    nix-index
-    tfswitch
-    yarn2nix
-    starship
-    dnsmasq
-    ripgrep
-    weechat
-    gnumake
-    openssh
-    fcitx5
-    bundix
-    cargo
-    arion
-    unzip
-    gnupg
-    lorri
-    nomad
-    vault
-    ruby
-    yarn
-    xsel
-    lshw
-    htop
-    nmap
-    stow
-    zlib
-    wget
-    curl
-    gcc
-    age
-    git
-    fzf
-    dig
     vim
-    vim
-    git
-    gh
-    traceroute
-    vim
-    wget
     git
   ];
 
