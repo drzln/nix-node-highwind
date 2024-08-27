@@ -13,10 +13,8 @@
     vim
     git
     git-remote-gcrypt
-    android-tools
     coreutils-prefixed
     gnirehtet
-    jellyfin-ffmpeg
     yq-go
     unzip
     opam
@@ -27,7 +25,6 @@
     tfplugindocs
     tfswitch
     golint
-    duckdb
     docker
     delve
     tree
@@ -39,18 +36,12 @@
     # postgres_with_libpq
     lazygit
     packer
-    twitch-tui
-    wiki-tui
-    tuir
     dig
     nmap
     saml2aws
-    tuifeed
-    kompose
     gcc
     jdk
     cargo
-    dotnet-sdk
     ripgrep
     podman-compose
     tree
@@ -60,22 +51,13 @@
     xorriso
     traceroute
     iproute2
-    s-tui
-    usbutils
     sheldon
-    julia
-    adb-sync
-    autoadb
     python39Packages.pipenv-poetry-migrate
     python39Packages.poetry-core
     black
     pipenv
     poetry
-    asmfmt
     zlib
-    ssm-session-manager-plugin
-    cloud-nuke
-    nodePackages_latest.cdktf-cli
     awscli2
     goreleaser
     go-task
@@ -115,8 +97,6 @@
     himalaya
     tree-sitter
     yt-dlp
-    transmission_4
-    xorg.xrandr
     tig
     grex
     skim
@@ -144,20 +124,7 @@
     procs
   ];
 
-  home.file."backgrounds/nord/tools".source = builtins.fetchGit {
-    url = "https://github.com/arcticicestudio/nord.git";
-    ref = "develop";
-    rev = "c93f12b23baac69a92e7559f69e7a60c20b9da0d";
-  };
-
-  home.file."backgrounds/nord/backgrounds".source = builtins.fetchGit {
-    url = "https://github.com/dxnst/nord-backgrounds.git";
-    ref = "main";
-    rev = "c47d6b8b0ea391fabbb79aa005703ae5549ffdc4";
-  };
-
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
-
   home.file.".config/sheldon/plugins.toml".source = ./sheldon/plugins.toml;
 }

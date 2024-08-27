@@ -43,8 +43,6 @@
   home-manager.users.luis = import ./home.nix;
   environment.systemPackages = with pkgs; [
     nix-index
-    drm_info
-    pciutils
     tfswitch
     yarn2nix
     starship
@@ -63,9 +61,6 @@
     nomad
     vault
     ruby
-    sddm
-    sway
-    rofi
     yarn
     xsel
     lshw
@@ -84,7 +79,6 @@
     vim
     git
     gh
-    globalprotect-openconnect
     traceroute
     vim
     wget
@@ -102,10 +96,10 @@
     "8.8.4.4"
   ];
 
-  fonts.packages = with pkgs;[
-    fira-code
-    fira-code-symbols
-  ];
+  # fonts.packages = with pkgs;[
+  #   fira-code
+  #   fira-code-symbols
+  # ];
 
   powerManagement.cpuFreqGovernor = "performance";
 
