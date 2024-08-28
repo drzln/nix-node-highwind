@@ -38,9 +38,8 @@
     global
         log /dev/log local0
         log /dev/log local1 notice
-        chroot /var/lib/haproxy
-        user haproxy
-        group haproxy
+        user root
+        group root
         daemon
 
     defaults
