@@ -1,6 +1,7 @@
 {
   services.haproxy = {
     enable = true;
+    package = pkgs.haproxy;
 
     config = ''
       global
