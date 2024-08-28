@@ -15,13 +15,16 @@
 
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
-    homeManagerModules = import ./modules/home-manager;
+    homeManagerModules =
+      {
+        nvim = import ./modules/home-manager/nvim;
+      };
+
     homeConfigurations = {
       luis = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           home-manager.modules.home-manager
-          self.homeManagerModules.blackmatter
           ./home.nix
         ];
       };
