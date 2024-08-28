@@ -16,8 +16,8 @@
   home.packages = with pkgs; [
     vim
     nmap
-    poetry
     zsh
+    poetry
   ];
 
   programs.fzf.enable = true;
