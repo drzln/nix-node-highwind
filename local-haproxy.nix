@@ -40,7 +40,6 @@
         log /dev/log local1 notice
         user root
         group root
-        daemon
 
     defaults
         log global
