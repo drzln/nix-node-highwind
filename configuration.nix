@@ -19,7 +19,7 @@
   };
 
   users.users.luis = {
-    # uid = 1000;
+    uid = 1001;
     isNormalUser = true;
     description = "luis";
     extraGroups = [
