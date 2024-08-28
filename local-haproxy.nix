@@ -27,11 +27,6 @@
     };
 
     path = [ pkgs.haproxy ];
-
-    # preStart = ''
-    #   mkdir -p /run/haproxy
-    #   chown haproxy:haproxy /run/haproxy
-    # '';
   };
 
   # environment.etc."haproxy/haproxy.cfg".text = ''
@@ -56,8 +51,7 @@
   # '';
   environment.etc."haproxy/haproxy.cfg".text = ''
     global
-        log /dev/log local0
-        log /dev/log local1 notice
+        log /var/log/haproxy.log local0
         chroot /var/lib/haproxy
         stats socket /run/haproxy/admin.sock mode 660 level admin
         stats timeout 30s
