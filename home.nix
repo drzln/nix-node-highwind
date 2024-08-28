@@ -24,7 +24,7 @@
   programs.fzf.enableZshIntegration = true;
 
   home.sessionVariables.SHELL = "${pkgs.zsh}/bin/zsh";
-  blackmatter.programs.nvim.enable = true;
-  blackmatter.shell.enable = true;
+  blackmatter.programs.nvim.enable = false;
+  blackmatter.shell.enable = false;
   # home.file.".config/sheldon/plugins.toml".source = ./sheldon/plugins.toml;
 }
