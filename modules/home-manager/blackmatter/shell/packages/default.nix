@@ -61,19 +61,12 @@ in
       home.packages = with pkgs;
         [
           git-remote-gcrypt
-          android-tools
           coreutils-prefixed
-          gnirehtet
-          jellyfin-ffmpeg
           yq-go
           unzip
           opam
-          # yq
-          # python3
-          mysql
           tfsec
           ruby
-          tfplugindocs
           tfswitch
           golint
           duckdb
@@ -83,30 +76,17 @@ in
           yarn
           typescript
           lazydocker
-          nixopsUnstable
           postgres_with_libpq
           lazygit
           packer
-          twitch-tui
-          wiki-tui
-          tuir
           dig
           nmap
-          spotify-tui
           saml2aws
-          tuifeed
-          kompose
           gcc
           jdk
           cargo
-          dotnet-sdk
           ripgrep
-          podman-compose
           tree
-          sshfs
-          php81Packages.composer
-          php81Packages.php-cs-fixer
-          xorriso
         ]
         ++ import ./python pkgs
         ++ import ./kubernetes pkgs
