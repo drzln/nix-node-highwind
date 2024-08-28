@@ -10,20 +10,24 @@
   };
 
   outputs = { self, nixpkgs, home-manager }: {
+    inherit (self) outputs;
+    specialArgs = {
+      inherit outputs;
+    };
+    extraSpecialArgs = specialArgs;
 
-    packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+    packages. x86_64-linux. hello = nixpkgs.legacyPackages.x86_64-linux.hello;
 
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
-    homeManagerModules =
-      {
-        nvim = import ./modules/home-manager/nvim;
-      };
+    homeManagerModules = import ./modules/home-manager;
 
     homeConfigurations = {
       luis = home-manager.lib.homeManagerConfiguration {
+        # inherit extraSpecialArgs;
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
+          self.homeManagerModules.blackmatter
           home-manager.modules.home-manager
           ./home.nix
         ];
