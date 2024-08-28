@@ -21,6 +21,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           home-manager.modules.home-manager
+          self.homeManagerModules.blackmatter
           ./home.nix
         ];
       };
@@ -34,7 +35,6 @@
           /etc/nixos/local-config.nix
           ./configuration.nix
           home-manager.nixosModules.home-manager
-          self.homeManagerModules.blackmatter
         ];
       };
     };

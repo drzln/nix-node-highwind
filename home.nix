@@ -17,5 +17,6 @@
 
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
+  blackmater.programs.nvim.enable = true;
   # home.file.".config/sheldon/plugins.toml".source = ./sheldon/plugins.toml;
 }
