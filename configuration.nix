@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./haproxy.nix
+    ./local-haproxy.nix
   ];
   nixpkgs.config.allowUnfree = true;
   networking.hostName = "highwind";
