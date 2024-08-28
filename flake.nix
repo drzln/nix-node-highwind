@@ -34,6 +34,7 @@
           /etc/nixos/local-config.nix
           ./configuration.nix
           home-manager.nixosModules.home-manager
+          self.homeManagerModules.blackmatter
         ];
       };
     };
