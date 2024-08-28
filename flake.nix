@@ -10,10 +10,10 @@
   };
 
   outputs = { self, nixpkgs, home-manager }: {
-    inherit (self) outputs;
-    specialArgs = {
-      inherit outputs;
-    };
+    # inherit (self) outputs;
+    # specialArgs = {
+    #   inherit outputs;
+    # };
     extraSpecialArgs = specialArgs;
 
     packages. x86_64-linux. hello = nixpkgs.legacyPackages.x86_64-linux.hello;
