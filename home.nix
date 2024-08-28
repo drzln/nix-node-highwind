@@ -1,9 +1,10 @@
 { config, pkgs, outputs, ... }:
 
 {
-  imports = [
-    outputs.homeManagerModules.blackmatter
-  ];
+  # imports = [
+  #   outputs.homeManagerModules.blackmatter
+  # ];
+
   nixpkgs.config.allowUnfree = true;
   home.username = "luis"; # Replace with your actual username
   home.homeDirectory = "/home/luis"; # Replace with your home directory
