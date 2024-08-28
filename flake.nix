@@ -30,7 +30,7 @@
           inherit extraSpecialArgs;
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           modules = [
-            home-manager.modules.home-manager
+            # home-manager.modules.home-manager
             ./home.nix
           ];
         };
