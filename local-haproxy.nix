@@ -9,7 +9,7 @@
     group = "haproxy";
     description = "HAProxy User";
     home = "/nope";
-    shell = pkgs.runShellCommand "false";
+    shell = pkgs.nologin;
   };
 
   systemd.services.haproxy = {
