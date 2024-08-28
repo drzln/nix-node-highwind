@@ -9,7 +9,11 @@
   home.stateVersion = "24.05"; # Use the correct version for your setup
 
   # Enable some basic packages
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    vim
+    nmap
+    poetry
+  ];
 
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
