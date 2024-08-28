@@ -1,9 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  # imports = [
-  #   ./haproxy.nix
-  # ];
+  imports = [
+    ./haproxy.nix
+  ];
   nixpkgs.config.allowUnfree = true;
   networking.hostName = "highwind";
   time.timeZone = "America/Fortaleza";
