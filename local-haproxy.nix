@@ -29,26 +29,6 @@
     path = [ pkgs.haproxy ];
   };
 
-  # environment.etc."haproxy/haproxy.cfg".text = ''
-  #   global
-  #       log /dev/log local0
-  #       log /dev/log local1 notice
-  #       user root
-  #       group root
-  #
-  #   defaults
-  #       log global
-  #       timeout connect 5000ms
-  #       timeout client  50000ms
-  #       timeout server  50000ms
-  #
-  #   frontend http-in
-  #       bind *:8089
-  #       default_backend servers
-  #
-  #   backend servers
-  #       server server1 127.0.0.1:8080 maxconn 32
-  # '';
   environment.etc."haproxy/haproxy.cfg".text = ''
     global
         log /var/log/haproxy.log local0
