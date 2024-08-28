@@ -15,6 +15,7 @@
 
     packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
 
+    homeManagerModules = import ./modules/home-manager;
     homeConfigurations = {
       luis = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
