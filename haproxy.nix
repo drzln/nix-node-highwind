@@ -1,4 +1,4 @@
-{
+{ config, pkgs, ... }: {
   services.haproxy = {
     enable = true;
     package = pkgs.haproxy;
