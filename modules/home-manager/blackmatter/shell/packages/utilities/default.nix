@@ -2,7 +2,7 @@ pkgs: with pkgs; [
   tealdeer
   himalaya
   tree-sitter
-  youtube-dl
+  # youtube-dl
   transmission
   xorg.xrandr
   tig
