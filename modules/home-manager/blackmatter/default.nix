@@ -1,7 +1,7 @@
 { outputs, ... }:
 {
   imports = [
-		./gitconfig
+    ./gitconfig
     ./desktop
     ./shell
     ./nvim
