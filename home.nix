@@ -17,6 +17,7 @@
     vim
     nmap
     poetry
+    zsh
   ];
 
   programs.fzf.enable = true;
