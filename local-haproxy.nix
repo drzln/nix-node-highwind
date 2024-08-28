@@ -1,4 +1,17 @@
 { config, pkgs, ... }: {
+  users.groups.haproxy = {
+    gid = 900;
+  };
+
+  users.users.haproxy = {
+    isSystemUser = true;
+    uid = 900;
+    group = "haproxy";
+    description = "HAProxy User";
+    home = "/nope";
+    shell = pkgs.runShellCommand "false";
+  };
+
   systemd.services.haproxy = {
     description = "HAProxy Load Balancer";
     after = [ "network.target" ];
@@ -15,7 +28,6 @@
 
     path = [ pkgs.haproxy ];
 
-    # Optionally, create the /run/haproxy directory
     preStart = ''
       mkdir -p /run/haproxy
       chown haproxy:haproxy /run/haproxy
