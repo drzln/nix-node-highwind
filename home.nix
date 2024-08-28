@@ -13,9 +13,5 @@
 
   programs.fzf.enable = true;
   programs.fzf.enableZshIntegration = true;
-  home.file.".config/sheldon/plugins.toml".source = ./sheldon/plugins.toml;
-  home.file."~/code" = {
-    text = "";
-    directory = true;
-  };
+  # home.file.".config/sheldon/plugins.toml".source = ./sheldon/plugins.toml;
 }
