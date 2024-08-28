@@ -1,9 +1,9 @@
-{ config, pkgs, outputs, ... }:
+{ config, pkgs, ... }:
 
 {
-  # imports = [
-  #   outputs.homeManagerModules.blackmatter
-  # ];
+  imports = [
+    ./modules/home-manager/blackmatter
+  ];
 
   nixpkgs.config.allowUnfree = true;
   home.username = "luis"; # Replace with your actual username
