@@ -11,23 +11,13 @@
 
   outputs = { self, nixpkgs, home-manager }:
     let
-      # inherit (self) outputs;
-      # specialArgs = {
-      #   inherit outputs;
-      # };
-      # extraSpecialArgs = specialArgs;
     in
     {
 
-      packages. x86_64-linux. hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-
+      packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
       packages.x86_64-linux.default = self.packages.x86_64-linux.hello;
-
-      # homeManagerModules = import ./modules/home-manager;
-
       homeConfigurations = {
         luis = home-manager.lib.homeManagerConfiguration {
-          # inherit extraSpecialArgs;
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           modules = [
             ./home.nix
