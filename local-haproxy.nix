@@ -36,7 +36,6 @@
   environment.etc."haproxy/haproxy.cfg".text = ''
     global
         log /var/log/haproxy.log local0
-        chroot /var/lib/haproxy
         stats socket /run/haproxy.sock mode 660 level admin
         stats timeout 30s
         user haproxy
