@@ -52,6 +52,7 @@
         timeout server  50000ms
 
     frontend http-in
+        mode http
         bind *:8089
         acl host_pinger hdr(host) -i luis.apps.pinger.rocks
         use_backend pinger-backend if host_pinger
