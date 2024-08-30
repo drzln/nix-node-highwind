@@ -40,7 +40,6 @@
         stats timeout 30s
         user haproxy
         group haproxy
-        daemon
 
     defaults
         log global
