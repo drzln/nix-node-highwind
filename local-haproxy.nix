@@ -21,8 +21,8 @@
       ExecStart = "${pkgs.haproxy}/bin/haproxy -f /etc/haproxy/haproxy.cfg";
       ExecReload = "${pkgs.haproxy}/bin/haproxy -c -f /etc/haproxy/haproxy.cfg && ${pkgs.haproxy}/bin/haproxy -sf $MAINPID";
       Restart = "always";
-      User = "haproxy";
-      Group = "haproxy";
+      User = "root";
+      Group = "root";
       PIDFile = "/run/haproxy.pid";
     };
 
@@ -38,8 +38,8 @@
         log /var/log/haproxy.log local0
         stats socket /run/haproxy.sock mode 660 level admin
         stats timeout 30s
-        user haproxy
-        group haproxy
+        user root
+        group root
 
     defaults
         log global
