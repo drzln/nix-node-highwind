@@ -21,12 +21,16 @@
       ExecStart = "${pkgs.haproxy}/bin/haproxy -f /etc/haproxy/haproxy.cfg";
       ExecReload = "${pkgs.haproxy}/bin/haproxy -c -f /etc/haproxy/haproxy.cfg && ${pkgs.haproxy}/bin/haproxy -sf $MAINPID";
       Restart = "always";
-      User = "root";
-      Group = "root";
+      User = "haproxy";
+      Group = "haproxy";
       PIDFile = "/run/haproxy.pid";
     };
 
     path = [ pkgs.haproxy ];
+    preStart = ''
+      mkdir -p /run/haproxy
+      chown haproxy:haproxy /run/haproxy
+    '';
   };
 
   environment.etc."haproxy/haproxy.cfg".text = ''
