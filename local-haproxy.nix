@@ -58,6 +58,7 @@
         use_backend pinger-backend if host_pinger
 
     backend pinger-backend
+        mode http
         server splunk pinger.splunkcloud.com:8089 check
   '';
 }
